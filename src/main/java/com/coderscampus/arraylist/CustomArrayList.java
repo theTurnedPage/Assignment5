@@ -9,8 +9,8 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public boolean add(T item) {
 		
-		backSize();
-		items[size++] = item;		
+		backSize(); //method to "back" the Object array
+		items[size++] = item; //insert element into Object array, increment the size variable
 		return false;
 	}
 
@@ -32,6 +32,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 		if (size == items.length) {
 			//double size of array
 			items = Arrays.copyOf(items, items.length * 2);
+			System.out.println("\n***Increase size of array***\n" + "\n New Size: " + items.length + "\n");
 		} else {
 			System.out.println("No need to increase size of Array yet");
 		}
