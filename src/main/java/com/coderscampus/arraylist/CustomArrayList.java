@@ -1,6 +1,6 @@
 package com.coderscampus.arraylist;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class CustomArrayList<T> implements CustomList<T> {
 	Object[] items = new Object[10];
@@ -31,12 +31,20 @@ public class CustomArrayList<T> implements CustomList<T> {
 		
 		if (size == items.length) {
 			//double size of array
-			items = Arrays.copyOf(items, items.length * 2);
+			//items = Arrays.copyOf(items, items.length * 2);
+			items = backArraySize(items);
 			System.out.println("\n***Increase size of array***\n" + "\n New Size: " + items.length + "\n");
 		} else {
 			System.out.println("No need to increase size of Array yet");
 		}
 		
+	}
+	//just in case I'm not allowed to use java.util.arrays, here is a separate method to handle the doubling of the array
+	private Object[] backArraySize(Object[] someArray) {
+		
+		Object[] doubledArray = new Object[someArray.length * 2];
+								
+		return doubledArray;				
 	}
 	
 }
