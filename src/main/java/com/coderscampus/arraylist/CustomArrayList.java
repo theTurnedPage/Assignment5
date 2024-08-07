@@ -9,7 +9,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public boolean add(T item) {
 		
-		//backSize();
+		backSize();
 		items[size++] = item;		
 		return false;
 	}
