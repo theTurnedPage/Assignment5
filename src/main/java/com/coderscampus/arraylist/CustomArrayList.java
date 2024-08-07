@@ -21,7 +21,10 @@ public class CustomArrayList<T> implements CustomList<T> {
 
 	@Override
 	public T get(int index) {
-		return null;
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index Out of Bounds Exception!");
+		}
+		return (T) items[index];
 	}
 		
 	private void backSize() {
@@ -29,6 +32,8 @@ public class CustomArrayList<T> implements CustomList<T> {
 		if (size == items.length) {
 			//double size of array
 			items = Arrays.copyOf(items, items.length * 2);
+		} else {
+			System.out.println("No need to increase size of Array yet");
 		}
 		
 	}
