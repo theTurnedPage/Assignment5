@@ -42,8 +42,23 @@ public class CustomArrayList<T> implements CustomList<T> {
 	//just in case I'm not allowed to use java.util.arrays, here is a separate method to handle the doubling of the array
 	private Object[] backArraySize(Object[] someArray) {
 		
+		//create new collection with double the size as the last
 		Object[] doubledArray = new Object[someArray.length * 2];
-								
+		//copy elements from previous collection to new collection
+		System.out.println(doubledArray.length);
+		
+		if (doubledArray[0] == null) {
+			for (int i = 0; i < someArray.length-1; i++) {
+				doubledArray[i] = someArray[i];
+			}
+		} else {
+			for (int i = someArray.length-1; i < doubledArray.length-1; i++) {
+				doubledArray[i] = someArray[i];
+			}
+		}
+
+			
+		//send newly copied collection			
 		return doubledArray;				
 	}
 	
