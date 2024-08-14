@@ -47,16 +47,16 @@ public class CustomArrayList<T> implements CustomList<T> {
 		//copy elements from previous collection to new collection
 		System.out.println(doubledArray.length);
 		
+		//catch the null value at the start, use it to populate the list initially
 		if (doubledArray[0] == null) {
-			for (int i = 0; i < someArray.length-1; i++) {
+			for (int i = 0; i < someArray.length; i++) {
 				doubledArray[i] = someArray[i];
 			}
-		} else {
-			for (int i = someArray.length-1; i < doubledArray.length-1; i++) {
+		} else { //once initial nulls are changed above, continue to populate
+			for (int i = someArray.length-1; i < doubledArray.length; i++) {
 				doubledArray[i] = someArray[i];
 			}
 		}
-
 			
 		//send newly copied collection			
 		return doubledArray;				

@@ -12,7 +12,7 @@ public class CustomListApplication {
 		}
 		
 		for (int i = 0; i < 40; i++) {		
-			System.out.println(testList.get(i));
+			System.out.println("Element: " + testList.get(i));
 		}					
 	}
 	
